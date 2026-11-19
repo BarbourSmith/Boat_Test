@@ -20,8 +20,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.1541,
-      "y": 0.7014,
+      "x": 0.1594,
+      "y": 0.7127,
       "uniqueID": "id-1548876",
       "name": "References",
       "topLevel": false,
@@ -40,8 +40,8 @@
         },
         {
           "atomType": "Import",
-          "x": 0.0741,
-          "y": 0.2254,
+          "x": 0.0728,
+          "y": 0.2056,
           "uniqueID": "id-1548880",
           "fileName": "IMG_20260830_124217607.jpg",
           "name": "Import",
@@ -52,8 +52,8 @@
         },
         {
           "atomType": "Import",
-          "x": 0.0714,
-          "y": 0.4507,
+          "x": 0.0787,
+          "y": 0.4535,
           "uniqueID": "id-1548882",
           "fileName": "IMG_20261018_105952329.jpg",
           "name": "Import",
@@ -64,7 +64,7 @@
         },
         {
           "atomType": "Import",
-          "x": 0.0694,
+          "x": 0.0701,
           "y": 0.6479,
           "uniqueID": "id-1548884",
           "fileName": "IMG_20261018_111201044.jpg",
@@ -76,8 +76,8 @@
         },
         {
           "atomType": "Import",
-          "x": 0.1118,
-          "y": 0.8225,
+          "x": 0.1091,
+          "y": 0.8169,
           "uniqueID": "id-1548889",
           "fileName": "IMG_20261018_120349237.jpg",
           "name": "Import",
