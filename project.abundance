@@ -1,13 +1,110 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-1548873",
-    "name": "Boat_Test",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-1548873",
+  "name": "Boat_Test",
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-1548874",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Molecule",
+      "x": 0.1541,
+      "y": 0.7014,
+      "uniqueID": "id-1548876",
+      "name": "References",
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-1548878",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Import",
+          "x": 0.0741,
+          "y": 0.2254,
+          "uniqueID": "id-1548880",
+          "fileName": "IMG_20260830_124217607.jpg",
+          "name": "Import",
+          "type": "JPG",
+          "repoOwner": "BarbourSmith",
+          "repoName": "Boat_Test",
+          "SVGwidth": 10
+        },
+        {
+          "atomType": "Import",
+          "x": 0.0714,
+          "y": 0.4507,
+          "uniqueID": "id-1548882",
+          "fileName": "IMG_20261018_105952329.jpg",
+          "name": "Import",
+          "type": "JPG",
+          "repoOwner": "BarbourSmith",
+          "repoName": "Boat_Test",
+          "SVGwidth": 10
+        },
+        {
+          "atomType": "Import",
+          "x": 0.0694,
+          "y": 0.6479,
+          "uniqueID": "id-1548884",
+          "fileName": "IMG_20261018_111201044.jpg",
+          "name": "Import",
+          "type": "JPG",
+          "repoOwner": "BarbourSmith",
+          "repoName": "Boat_Test",
+          "SVGwidth": 10
+        },
+        {
+          "atomType": "Import",
+          "x": 0.1118,
+          "y": 0.8225,
+          "uniqueID": "id-1548889",
+          "fileName": "IMG_20261018_120349237.jpg",
+          "name": "Import",
+          "type": "JPG",
+          "repoOwner": "BarbourSmith",
+          "repoName": "Boat_Test",
+          "SVGwidth": 10
+        },
+        {
+          "atomType": "Import",
+          "x": 0.1918,
+          "y": 0.8563,
+          "uniqueID": "id-1548891",
+          "fileName": "IMG_0074.JPG",
+          "name": "Import",
+          "type": "JPG",
+          "repoOwner": "BarbourSmith",
+          "repoName": "Boat_Test",
+          "SVGwidth": 10
+        }
+      ],
+      "allConnectors": [],
+      "fileTypeVersion": 1
+    }
+  ],
+  "allConnectors": [],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
