@@ -5228,6 +5228,10 @@
         {
           "name": "Transom",
           "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Longitudinals",
+          "ioValue": "__GEOMETRY_INPUT__"
         }
       ],
       "topLevel": false,
@@ -5281,10 +5285,19 @@
           "options": []
         },
         {
+          "atomType": "Input",
+          "x": 0.0254,
+          "y": 0.5231,
+          "uniqueID": "id-1550413",
+          "name": "Longitudinals",
+          "type": "geometry",
+          "options": []
+        },
+        {
           "atomType": "Assembly",
           "x": 0.6,
           "y": 0.5,
-          "uniqueID": "id-1549996",
+          "uniqueID": "id-1550416",
           "ioValues": [
             {
               "name": "makeDisjoint",
@@ -5309,6 +5322,10 @@
             {
               "name": "Shape5",
               "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape6",
+              "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
         }
@@ -5317,26 +5334,31 @@
         {
           "ap2Name": "Shape 1",
           "ap1ID": "id-1549984",
-          "ap2ID": "id-1549996"
-        },
-        {
-          "ap2Name": "Shape2",
-          "ap1ID": "id-1549987",
-          "ap2ID": "id-1549996"
+          "ap2ID": "id-1550416"
         },
         {
           "ap2Name": "Shape3",
-          "ap1ID": "id-1549990",
-          "ap2ID": "id-1549996"
+          "ap1ID": "id-1549987",
+          "ap2ID": "id-1550416"
         },
         {
           "ap2Name": "Shape4",
+          "ap1ID": "id-1549990",
+          "ap2ID": "id-1550416"
+        },
+        {
+          "ap2Name": "Shape5",
           "ap1ID": "id-1549993",
-          "ap2ID": "id-1549996"
+          "ap2ID": "id-1550416"
+        },
+        {
+          "ap2Name": "Shape2",
+          "ap1ID": "id-1550413",
+          "ap2ID": "id-1550416"
         },
         {
           "ap2Name": "number or geometry",
-          "ap1ID": "id-1549996",
+          "ap1ID": "id-1550416",
           "ap2ID": "id-1549982"
         }
       ],
@@ -7144,6 +7166,82 @@
             }
           ],
           "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.85,
+          "y": 0.5,
+          "uniqueID": "id-1550394",
+          "ioValues": [
+            {
+              "name": "makeDisjoint",
+              "ioValue": false
+            },
+            {
+              "name": "Shape 1",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape2",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape3",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape4",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape5",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape6",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape7",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape8",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape9",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape10",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape11",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape12",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape13",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape14",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape15",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape16",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
         }
       ],
       "allConnectors": [
@@ -7221,6 +7319,86 @@
           "ap2Name": "Hull Lines",
           "ap1ID": "id-1550016",
           "ap2ID": "id-1550369"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-1550019",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape2",
+          "ap1ID": "id-1550044",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape3",
+          "ap1ID": "id-1550069",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape4",
+          "ap1ID": "id-1550094",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape5",
+          "ap1ID": "id-1550119",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape6",
+          "ap1ID": "id-1550144",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape7",
+          "ap1ID": "id-1550169",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape8",
+          "ap1ID": "id-1550194",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape9",
+          "ap1ID": "id-1550219",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape10",
+          "ap1ID": "id-1550244",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape11",
+          "ap1ID": "id-1550269",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape12",
+          "ap1ID": "id-1550294",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape13",
+          "ap1ID": "id-1550319",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape14",
+          "ap1ID": "id-1550344",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "Shape15",
+          "ap1ID": "id-1550369",
+          "ap2ID": "id-1550394"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1550394",
+          "ap2ID": "id-1550014"
         }
       ],
       "fileTypeVersion": 1
@@ -7291,6 +7469,11 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-1550004",
       "ap2ID": "id-1548874"
+    },
+    {
+      "ap2Name": "Longitudinals",
+      "ap1ID": "id-1550012",
+      "ap2ID": "id-1549980"
     }
   ],
   "unitsKey": "MM",
