@@ -20,8 +20,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.1594,
-      "y": 0.7127,
+      "x": 0.121,
+      "y": 0.7972,
       "uniqueID": "id-1548876",
       "name": "References",
       "topLevel": false,
@@ -104,8 +104,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.55,
-      "y": 0.35,
+      "x": 0.5489,
+      "y": 0.3493,
       "uniqueID": "id-1548993",
       "name": "Hull Skin",
       "topLevel": false,
@@ -150,9 +150,1181 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Code",
+      "x": 0.1045,
+      "y": 0.3887,
+      "uniqueID": "id-1549008",
+      "interpreterVersion": 1,
+      "code": "/**\n * Hull lines for the boat, measured from the reference photos (mm). The frame, transom, stem, keel and skin\n * code atoms all read this table, so edit the boat's shape here and every part follows.\n *\n * Axes: X across (+ starboard), Y forward from the transom's deck-corner line, Z up from the baseline\n * (the keel at frame 7). Lines are to the inside of the planking, i.e. the frame outlines.\n * Each station: keel height; chine half-breadth and height; sheer (deck edge) half-breadth and height;\n * deck crown at the centreline; bulge = how far the side bows outward (tumblehome aft).\n * The transom is raked: its offsets are measured up its face from the keel (\"V\" values).\n * \"keel\" is the keel / stem profile as [Y, Z] points, ending at the stem head.\n */\nconst LINES = {\n  note: \"Hull lines in mm, to the inside of the planking (the frame outlines). Measured from the reference photos.\",\n  transom: { keelY: -96, keelZ: 184, rakeDeg: 14, chineB: 530, chineV: 110, sheerB: 645, sheerV: 400, crown: 32, bulge: 60 },\n  stations: [\n    { name: \"Frame 8\", y: 535,  keelZ: 60,  chineB: 600, chineZ: 185, sheerB: 760, sheerZ: 590, crown: 45,   bulge: 20 },\n    { name: \"Frame 7\", y: 1070, keelZ: 0,   chineB: 591, chineZ: 96,  sheerB: 822, sheerZ: 608, crown: 55.5, bulge: 0 },\n    { name: \"Frame 6\", y: 1605, keelZ: 0,   chineB: 555, chineZ: 118, sheerB: 810, sheerZ: 630, crown: 54,   bulge: 0 },\n    { name: \"Frame 5\", y: 2140, keelZ: 0,   chineB: 495, chineZ: 145, sheerB: 778, sheerZ: 655, crown: 52,   bulge: 0 },\n    { name: \"Frame 4\", y: 2675, keelZ: 0,   chineB: 425, chineZ: 176, sheerB: 731, sheerZ: 680, crown: 50,   bulge: 0 },\n    { name: \"Frame 3\", y: 3210, keelZ: 15,  chineB: 335, chineZ: 228, sheerB: 652, sheerZ: 712, crown: 45,   bulge: 0 },\n    { name: \"Frame 2\", y: 3745, keelZ: 95,  chineB: 215, chineZ: 318, sheerB: 520, sheerZ: 758, crown: 35,   bulge: 0 },\n    { name: \"Frame 1\", y: 4280, keelZ: 310, chineB: 90,  chineZ: 480, sheerB: 305, sheerZ: 822, crown: 20,   bulge: 0 },\n    { name: \"Bow\",     y: 4540, keelZ: 600, chineB: 6,   chineZ: 670, sheerB: 14,  sheerZ: 870, crown: 1,    bulge: 0 },\n  ],\n  keel: [[-96, 184], [535, 60], [1070, 0], [3000, 0], [3210, 15], [3500, 45], [3745, 95], [4000, 175],\n         [4280, 310], [4450, 450], [4540, 600], [4590, 740], [4610, 880]],\n  stem: { aftEndY: 3300, moulding: 110, siding: 40 },\n  keelBatten: { width: 136, depth: 20 },\n  frameBand: 68,\n  frameBottomBand: 56,\n  frameCornerRadius: 70,\n};\n\nfunction run(): string {\n  return JSON.stringify(LINES);\n}\n",
+      "compiledCode": "\"use strict\";\n/**\n * Hull lines for the boat, measured from the reference photos (mm). The frame, transom, stem, keel and skin\n * code atoms all read this table, so edit the boat's shape here and every part follows.\n *\n * Axes: X across (+ starboard), Y forward from the transom's deck-corner line, Z up from the baseline\n * (the keel at frame 7). Lines are to the inside of the planking, i.e. the frame outlines.\n * Each station: keel height; chine half-breadth and height; sheer (deck edge) half-breadth and height;\n * deck crown at the centreline; bulge = how far the side bows outward (tumblehome aft).\n * The transom is raked: its offsets are measured up its face from the keel (\"V\" values).\n * \"keel\" is the keel / stem profile as [Y, Z] points, ending at the stem head.\n */\nconst LINES = {\n    note: \"Hull lines in mm, to the inside of the planking (the frame outlines). Measured from the reference photos.\",\n    transom: { keelY: -96, keelZ: 184, rakeDeg: 14, chineB: 530, chineV: 110, sheerB: 645, sheerV: 400, crown: 32, bulge: 60 },\n    stations: [\n        { name: \"Frame 8\", y: 535, keelZ: 60, chineB: 600, chineZ: 185, sheerB: 760, sheerZ: 590, crown: 45, bulge: 20 },\n        { name: \"Frame 7\", y: 1070, keelZ: 0, chineB: 591, chineZ: 96, sheerB: 822, sheerZ: 608, crown: 55.5, bulge: 0 },\n        { name: \"Frame 6\", y: 1605, keelZ: 0, chineB: 555, chineZ: 118, sheerB: 810, sheerZ: 630, crown: 54, bulge: 0 },\n        { name: \"Frame 5\", y: 2140, keelZ: 0, chineB: 495, chineZ: 145, sheerB: 778, sheerZ: 655, crown: 52, bulge: 0 },\n        { name: \"Frame 4\", y: 2675, keelZ: 0, chineB: 425, chineZ: 176, sheerB: 731, sheerZ: 680, crown: 50, bulge: 0 },\n        { name: \"Frame 3\", y: 3210, keelZ: 15, chineB: 335, chineZ: 228, sheerB: 652, sheerZ: 712, crown: 45, bulge: 0 },\n        { name: \"Frame 2\", y: 3745, keelZ: 95, chineB: 215, chineZ: 318, sheerB: 520, sheerZ: 758, crown: 35, bulge: 0 },\n        { name: \"Frame 1\", y: 4280, keelZ: 310, chineB: 90, chineZ: 480, sheerB: 305, sheerZ: 822, crown: 20, bulge: 0 },\n        { name: \"Bow\", y: 4540, keelZ: 600, chineB: 6, chineZ: 670, sheerB: 14, sheerZ: 870, crown: 1, bulge: 0 },\n    ],\n    keel: [[-96, 184], [535, 60], [1070, 0], [3000, 0], [3210, 15], [3500, 45], [3745, 95], [4000, 175],\n        [4280, 310], [4450, 450], [4540, 600], [4590, 740], [4610, 880]],\n    stem: { aftEndY: 3300, moulding: 110, siding: 40 },\n    keelBatten: { width: 136, depth: 20 },\n    frameBand: 68,\n    frameBottomBand: 56,\n    frameCornerRadius: 70,\n};\nfunction run() {\n    return JSON.stringify(LINES);\n}\n"
+    },
+    {
+      "atomType": "Molecule",
+      "x": 0.3545,
+      "y": 0.4282,
+      "uniqueID": "id-1549017",
+      "name": "Frames",
+      "ioValues": [
+        {
+          "name": "Hull Lines",
+          "ioValue": "{\"note\":\"Hull lines in mm, to the inside of the planking (the frame outlines). Measured from the reference photos.\",\"transom\":{\"keelY\":-96,\"keelZ\":184,\"rakeDeg\":14,\"chineB\":530,\"chineV\":110,\"sheerB\":645,\"sheerV\":400,\"crown\":32,\"bulge\":60},\"stations\":[{\"name\":\"Frame 8\",\"y\":535,\"keelZ\":60,\"chineB\":600,\"chineZ\":185,\"sheerB\":760,\"sheerZ\":590,\"crown\":45,\"bulge\":20},{\"name\":\"Frame 7\",\"y\":1070,\"keelZ\":0,\"chineB\":591,\"chineZ\":96,\"sheerB\":822,\"sheerZ\":608,\"crown\":55.5,\"bulge\":0},{\"name\":\"Frame 6\",\"y\":1605,\"keelZ\":0,\"chineB\":555,\"chineZ\":118,\"sheerB\":810,\"sheerZ\":630,\"crown\":54,\"bulge\":0},{\"name\":\"Frame 5\",\"y\":2140,\"keelZ\":0,\"chineB\":495,\"chineZ\":145,\"sheerB\":778,\"sheerZ\":655,\"crown\":52,\"bulge\":0},{\"name\":\"Frame 4\",\"y\":2675,\"keelZ\":0,\"chineB\":425,\"chineZ\":176,\"sheerB\":731,\"sheerZ\":680,\"crown\":50,\"bulge\":0},{\"name\":\"Frame 3\",\"y\":3210,\"keelZ\":15,\"chineB\":335,\"chineZ\":228,\"sheerB\":652,\"sheerZ\":712,\"crown\":45,\"bulge\":0},{\"name\":\"Frame 2\",\"y\":3745,\"keelZ\":95,\"chineB\":215,\"chineZ\":318,\"sheerB\":520,\"sheerZ\":758,\"crown\":35,\"bulge\":0},{\"name\":\"Frame 1\",\"y\":4280,\"keelZ\":310,\"chineB\":90,\"chineZ\":480,\"sheerB\":305,\"sheerZ\":822,\"crown\":20,\"bulge\":0},{\"name\":\"Bow\",\"y\":4540,\"keelZ\":600,\"chineB\":6,\"chineZ\":670,\"sheerB\":14,\"sheerZ\":870,\"crown\":1,\"bulge\":0}],\"keel\":[[-96,184],[535,60],[1070,0],[3000,0],[3210,15],[3500,45],[3745,95],[4000,175],[4280,310],[4450,450],[4540,600],[4590,740],[4610,880]],\"stem\":{\"aftEndY\":3300,\"moulding\":110,\"siding\":40},\"keelBatten\":{\"width\":136,\"depth\":20},\"frameBand\":68,\"frameBottomBand\":56,\"frameCornerRadius\":70}"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-1549019",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.2983,
+          "y": 0.5099,
+          "uniqueID": "id-1549021",
+          "name": "Frame 7",
+          "ioValues": [
+            {
+              "name": "Hull Lines",
+              "ioValue": "{\"note\":\"Hull lines in mm, to the inside of the planking (the frame outlines). Measured from the reference photos.\",\"transom\":{\"keelY\":-96,\"keelZ\":184,\"rakeDeg\":14,\"chineB\":530,\"chineV\":110,\"sheerB\":645,\"sheerV\":400,\"crown\":32,\"bulge\":60},\"stations\":[{\"name\":\"Frame 8\",\"y\":535,\"keelZ\":60,\"chineB\":600,\"chineZ\":185,\"sheerB\":760,\"sheerZ\":590,\"crown\":45,\"bulge\":20},{\"name\":\"Frame 7\",\"y\":1070,\"keelZ\":0,\"chineB\":591,\"chineZ\":96,\"sheerB\":822,\"sheerZ\":608,\"crown\":55.5,\"bulge\":0},{\"name\":\"Frame 6\",\"y\":1605,\"keelZ\":0,\"chineB\":555,\"chineZ\":118,\"sheerB\":810,\"sheerZ\":630,\"crown\":54,\"bulge\":0},{\"name\":\"Frame 5\",\"y\":2140,\"keelZ\":0,\"chineB\":495,\"chineZ\":145,\"sheerB\":778,\"sheerZ\":655,\"crown\":52,\"bulge\":0},{\"name\":\"Frame 4\",\"y\":2675,\"keelZ\":0,\"chineB\":425,\"chineZ\":176,\"sheerB\":731,\"sheerZ\":680,\"crown\":50,\"bulge\":0},{\"name\":\"Frame 3\",\"y\":3210,\"keelZ\":15,\"chineB\":335,\"chineZ\":228,\"sheerB\":652,\"sheerZ\":712,\"crown\":45,\"bulge\":0},{\"name\":\"Frame 2\",\"y\":3745,\"keelZ\":95,\"chineB\":215,\"chineZ\":318,\"sheerB\":520,\"sheerZ\":758,\"crown\":35,\"bulge\":0},{\"name\":\"Frame 1\",\"y\":4280,\"keelZ\":310,\"chineB\":90,\"chineZ\":480,\"sheerB\":305,\"sheerZ\":822,\"crown\":20,\"bulge\":0},{\"name\":\"Bow\",\"y\":4540,\"keelZ\":600,\"chineB\":6,\"chineZ\":670,\"sheerB\":14,\"sheerZ\":870,\"crown\":1,\"bulge\":0}],\"keel\":[[-96,184],[535,60],[1070,0],[3000,0],[3210,15],[3500,45],[3745,95],[4000,175],[4280,310],[4450,450],[4540,600],[4590,740],[4610,880]],\"stem\":{\"aftEndY\":3300,\"moulding\":110,\"siding\":40},\"keelBatten\":{\"width\":136,\"depth\":20},\"frameBand\":68,\"frameBottomBand\":56,\"frameCornerRadius\":70}"
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "id-1549023",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0.0254,
+              "y": 0.1538,
+              "uniqueID": "id-1549025",
+              "name": "Hull Lines",
+              "type": "string",
+              "options": []
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.3,
+              "uniqueID": "id-1549028",
+              "ioValues": [
+                {
+                  "name": "lines",
+                  "ioValue": "{\"note\":\"Hull lines in mm, to the inside of the planking (the frame outlines). Measured from the reference photos.\",\"transom\":{\"keelY\":-96,\"keelZ\":184,\"rakeDeg\":14,\"chineB\":530,\"chineV\":110,\"sheerB\":645,\"sheerV\":400,\"crown\":32,\"bulge\":60},\"stations\":[{\"name\":\"Frame 8\",\"y\":535,\"keelZ\":60,\"chineB\":600,\"chineZ\":185,\"sheerB\":760,\"sheerZ\":590,\"crown\":45,\"bulge\":20},{\"name\":\"Frame 7\",\"y\":1070,\"keelZ\":0,\"chineB\":591,\"chineZ\":96,\"sheerB\":822,\"sheerZ\":608,\"crown\":55.5,\"bulge\":0},{\"name\":\"Frame 6\",\"y\":1605,\"keelZ\":0,\"chineB\":555,\"chineZ\":118,\"sheerB\":810,\"sheerZ\":630,\"crown\":54,\"bulge\":0},{\"name\":\"Frame 5\",\"y\":2140,\"keelZ\":0,\"chineB\":495,\"chineZ\":145,\"sheerB\":778,\"sheerZ\":655,\"crown\":52,\"bulge\":0},{\"name\":\"Frame 4\",\"y\":2675,\"keelZ\":0,\"chineB\":425,\"chineZ\":176,\"sheerB\":731,\"sheerZ\":680,\"crown\":50,\"bulge\":0},{\"name\":\"Frame 3\",\"y\":3210,\"keelZ\":15,\"chineB\":335,\"chineZ\":228,\"sheerB\":652,\"sheerZ\":712,\"crown\":45,\"bulge\":0},{\"name\":\"Frame 2\",\"y\":3745,\"keelZ\":95,\"chineB\":215,\"chineZ\":318,\"sheerB\":520,\"sheerZ\":758,\"crown\":35,\"bulge\":0},{\"name\":\"Frame 1\",\"y\":4280,\"keelZ\":310,\"chineB\":90,\"chineZ\":480,\"sheerB\":305,\"sheerZ\":822,\"crown\":20,\"bulge\":0},{\"name\":\"Bow\",\"y\":4540,\"keelZ\":600,\"chineB\":6,\"chineZ\":670,\"sheerB\":14,\"sheerZ\":870,\"crown\":1,\"bulge\":0}],\"keel\":[[-96,184],[535,60],[1070,0],[3000,0],[3210,15],[3500,45],[3745,95],[4000,175],[4280,310],[4450,450],[4540,600],[4590,740],[4610,880]],\"stem\":{\"aftEndY\":3300,\"moulding\":110,\"siding\":40},\"keelBatten\":{\"width\":136,\"depth\":20},\"frameBand\":68,\"frameBottomBand\":56,\"frameCornerRadius\":70}"
+                },
+                {
+                  "name": "stationY",
+                  "ioValue": 1070,
+                  "currentEquation": "1070"
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/**\n * Outer outline of one hull frame, drawn from the shared hull lines at this frame's station.\n * Returns the 2D outline in the frame's own plane: X across the boat, Y = height above the baseline (mm).\n * The lightening cutout, thickness, placement and tag are built-in atoms beside this one.\n */\nconst DEFAULT_LINES = `{\"note\":\"Hull lines in mm, to the inside of the planking (the frame outlines). X across (+ starboard), Y forward from the transom's deck-corner line, Z up from the baseline (keel at frame 7). Measured from the reference photos.\",\"transom\":{\"keelY\":-96,\"keelZ\":184,\"rakeDeg\":14,\"chineB\":530,\"chineV\":110,\"sheerB\":645,\"sheerV\":400,\"crown\":32,\"bulge\":60},\"stations\":[{\"name\":\"Frame 8\",\"y\":535,\"keelZ\":60,\"chineB\":600,\"chineZ\":185,\"sheerB\":760,\"sheerZ\":590,\"crown\":45,\"bulge\":20},{\"name\":\"Frame 7\",\"y\":1070,\"keelZ\":0,\"chineB\":591,\"chineZ\":96,\"sheerB\":822,\"sheerZ\":608,\"crown\":55.5,\"bulge\":0},{\"name\":\"Frame 6\",\"y\":1605,\"keelZ\":0,\"chineB\":555,\"chineZ\":118,\"sheerB\":810,\"sheerZ\":630,\"crown\":54,\"bulge\":0},{\"name\":\"Frame 5\",\"y\":2140,\"keelZ\":0,\"chineB\":495,\"chineZ\":145,\"sheerB\":778,\"sheerZ\":655,\"crown\":52,\"bulge\":0},{\"name\":\"Frame 4\",\"y\":2675,\"keelZ\":0,\"chineB\":425,\"chineZ\":176,\"sheerB\":731,\"sheerZ\":680,\"crown\":50,\"bulge\":0},{\"name\":\"Frame 3\",\"y\":3210,\"keelZ\":15,\"chineB\":335,\"chineZ\":228,\"sheerB\":652,\"sheerZ\":712,\"crown\":45,\"bulge\":0},{\"name\":\"Frame 2\",\"y\":3745,\"keelZ\":95,\"chineB\":215,\"chineZ\":318,\"sheerB\":520,\"sheerZ\":758,\"crown\":35,\"bulge\":0},{\"name\":\"Frame 1\",\"y\":4280,\"keelZ\":310,\"chineB\":90,\"chineZ\":480,\"sheerB\":305,\"sheerZ\":822,\"crown\":20,\"bulge\":0},{\"name\":\"Bow\",\"y\":4540,\"keelZ\":600,\"chineB\":6,\"chineZ\":670,\"sheerB\":14,\"sheerZ\":870,\"crown\":1,\"bulge\":0}],\"keel\":[[-96,184],[535,60],[1070,0],[3000,0],[3210,15],[3500,45],[3745,95],[4000,175],[4280,310],[4450,450],[4540,600],[4590,740],[4610,880]],\"stem\":{\"aftEndY\":3300,\"moulding\":110,\"siding\":40},\"keelBatten\":{\"width\":136,\"depth\":20},\"frameBand\":68,\"frameBottomBand\":56,\"frameCornerRadius\":70}`;\n// ---- shared hull-lines helpers (same in every hull code atom) ----\n// Use the wired Hull Lines table when there is one, else the copy above.\nfunction linesOrDefault(lines: string): string {\n  return lines && lines.trim().startsWith(\"{\") ? lines : DEFAULT_LINES;\n}\n// Interpolates the station table smoothly (Hermite / Catmull-Rom) at any Y.\nfunction stationAt(L: any, y: number): any {\n  // the raked transom joins the table as a vertical pseudo-station at its mid-height, so the run aft stays fair\n  const T = L.transom, r = (T.rakeDeg * Math.PI) / 180;\n  const tr = { y: T.keelY + (T.sheerV / 2) * Math.sin(r), keelZ: T.keelZ, chineB: T.chineB, chineZ: T.keelZ + T.chineV * Math.cos(r),\n    sheerB: T.sheerB, sheerZ: T.keelZ + T.sheerV * Math.cos(r), crown: T.crown * Math.cos(r), bulge: T.bulge };\n  const st = [tr, ...L.stations];\n  const keys = [\"keelZ\", \"chineB\", \"chineZ\", \"sheerB\", \"sheerZ\", \"crown\", \"bulge\"];\n  const n = st.length;\n  if (y <= st[0].y) return st[0];\n  if (y >= st[n - 1].y) return st[n - 1];\n  let i = 0;\n  while (i < n - 2 && y > st[i + 1].y) i++;\n  const p0 = st[Math.max(i - 1, 0)], p1 = st[i], p2 = st[i + 1], p3 = st[Math.min(i + 2, n - 1)];\n  const h = p2.y - p1.y, t = (y - p1.y) / h, t2 = t * t, t3 = t2 * t;\n  const out: any = { y };\n  for (const k of keys) {\n    const m1 = ((p2[k] - p0[k]) / (p2.y - p0.y || 1)) * h;\n    const m2 = ((p3[k] - p1[k]) / (p3.y - p1.y || 1)) * h;\n    out[k] = (2 * t3 - 3 * t2 + 1) * p1[k] + (t3 - 2 * t2 + t) * m1 + (-2 * t3 + 3 * t2) * p2[k] + (t3 - t2) * m2;\n  }\n  return out;\n}\n// Closed section outline (x across, z up): keel -> starboard chine -> side -> sheer -> deck crown -> port side -> back.\n// Hard chine; the side bulges outward by `bulge` (tumblehome aft); the deck is a parabolic crown.\nfunction sectionPoints(s: any, n: number): number[][] {\n  const half: number[][] = [[0, s.keelZ], [s.chineB, s.chineZ]];\n  const dx = s.sheerB - s.chineB, dz = s.sheerZ - s.chineZ, len = Math.hypot(dx, dz) || 1;\n  const cx = (s.chineB + s.sheerB) / 2 + (s.bulge * dz) / len;\n  const cz = (s.chineZ + s.sheerZ) / 2 - (s.bulge * dx) / len;\n  for (let i = 1; i <= n; i++) {\n    const t = i / n, a = (1 - t) * (1 - t), b = 2 * (1 - t) * t, c = t * t;\n    half.push([a * s.chineB + b * cx + c * s.sheerB, a * s.chineZ + b * cz + c * s.sheerZ]);\n  }\n  for (let i = 1; i <= n; i++) {\n    const x = s.sheerB * (1 - i / n);\n    half.push([x, s.sheerZ + s.crown * (1 - (x / s.sheerB) ** 2)]);\n  }\n  const port = half.slice(1, half.length - 1).reverse().map((p) => [-p[0], p[1]]);\n  return [...half, ...port];\n}\n\nfunction run(lines: string = \"\", stationY: number = 1070): Assembly {\n  const L = JSON.parse(linesOrDefault(lines));\n  const pts = sectionPoints(stationAt(L, stationY), 12);\n  let pen = replicad.draw(pts[0]);\n  for (let i = 1; i < pts.length; i++) pen = pen.lineTo(pts[i]);\n  return new Assembly({ geometry: pen.close() });\n}\n",
+              "compiledCode": "\"use strict\";\n/**\n * Outer outline of one hull frame, drawn from the shared hull lines at this frame's station.\n * Returns the 2D outline in the frame's own plane: X across the boat, Y = height above the baseline (mm).\n * The lightening cutout, thickness, placement and tag are built-in atoms beside this one.\n */\nconst DEFAULT_LINES = `{\"note\":\"Hull lines in mm, to the inside of the planking (the frame outlines). X across (+ starboard), Y forward from the transom's deck-corner line, Z up from the baseline (keel at frame 7). Measured from the reference photos.\",\"transom\":{\"keelY\":-96,\"keelZ\":184,\"rakeDeg\":14,\"chineB\":530,\"chineV\":110,\"sheerB\":645,\"sheerV\":400,\"crown\":32,\"bulge\":60},\"stations\":[{\"name\":\"Frame 8\",\"y\":535,\"keelZ\":60,\"chineB\":600,\"chineZ\":185,\"sheerB\":760,\"sheerZ\":590,\"crown\":45,\"bulge\":20},{\"name\":\"Frame 7\",\"y\":1070,\"keelZ\":0,\"chineB\":591,\"chineZ\":96,\"sheerB\":822,\"sheerZ\":608,\"crown\":55.5,\"bulge\":0},{\"name\":\"Frame 6\",\"y\":1605,\"keelZ\":0,\"chineB\":555,\"chineZ\":118,\"sheerB\":810,\"sheerZ\":630,\"crown\":54,\"bulge\":0},{\"name\":\"Frame 5\",\"y\":2140,\"keelZ\":0,\"chineB\":495,\"chineZ\":145,\"sheerB\":778,\"sheerZ\":655,\"crown\":52,\"bulge\":0},{\"name\":\"Frame 4\",\"y\":2675,\"keelZ\":0,\"chineB\":425,\"chineZ\":176,\"sheerB\":731,\"sheerZ\":680,\"crown\":50,\"bulge\":0},{\"name\":\"Frame 3\",\"y\":3210,\"keelZ\":15,\"chineB\":335,\"chineZ\":228,\"sheerB\":652,\"sheerZ\":712,\"crown\":45,\"bulge\":0},{\"name\":\"Frame 2\",\"y\":3745,\"keelZ\":95,\"chineB\":215,\"chineZ\":318,\"sheerB\":520,\"sheerZ\":758,\"crown\":35,\"bulge\":0},{\"name\":\"Frame 1\",\"y\":4280,\"keelZ\":310,\"chineB\":90,\"chineZ\":480,\"sheerB\":305,\"sheerZ\":822,\"crown\":20,\"bulge\":0},{\"name\":\"Bow\",\"y\":4540,\"keelZ\":600,\"chineB\":6,\"chineZ\":670,\"sheerB\":14,\"sheerZ\":870,\"crown\":1,\"bulge\":0}],\"keel\":[[-96,184],[535,60],[1070,0],[3000,0],[3210,15],[3500,45],[3745,95],[4000,175],[4280,310],[4450,450],[4540,600],[4590,740],[4610,880]],\"stem\":{\"aftEndY\":3300,\"moulding\":110,\"siding\":40},\"keelBatten\":{\"width\":136,\"depth\":20},\"frameBand\":68,\"frameBottomBand\":56,\"frameCornerRadius\":70}`;\n// ---- shared hull-lines helpers (same in every hull code atom) ----\n// Use the wired Hull Lines table when there is one, else the copy above.\nfunction linesOrDefault(lines) {\n    return lines && lines.trim().startsWith(\"{\") ? lines : DEFAULT_LINES;\n}\n// Interpolates the station table smoothly (Hermite / Catmull-Rom) at any Y.\nfunction stationAt(L, y) {\n    // the raked transom joins the table as a vertical pseudo-station at its mid-height, so the run aft stays fair\n    const T = L.transom, r = (T.rakeDeg * Math.PI) / 180;\n    const tr = { y: T.keelY + (T.sheerV / 2) * Math.sin(r), keelZ: T.keelZ, chineB: T.chineB, chineZ: T.keelZ + T.chineV * Math.cos(r),\n        sheerB: T.sheerB, sheerZ: T.keelZ + T.sheerV * Math.cos(r), crown: T.crown * Math.cos(r), bulge: T.bulge };\n    const st = [tr, ...L.stations];\n    const keys = [\"keelZ\", \"chineB\", \"chineZ\", \"sheerB\", \"sheerZ\", \"crown\", \"bulge\"];\n    const n = st.length;\n    if (y <= st[0].y)\n        return st[0];\n    if (y >= st[n - 1].y)\n        return st[n - 1];\n    let i = 0;\n    while (i < n - 2 && y > st[i + 1].y)\n        i++;\n    const p0 = st[Math.max(i - 1, 0)], p1 = st[i], p2 = st[i + 1], p3 = st[Math.min(i + 2, n - 1)];\n    const h = p2.y - p1.y, t = (y - p1.y) / h, t2 = t * t, t3 = t2 * t;\n    const out = { y };\n    for (const k of keys) {\n        const m1 = ((p2[k] - p0[k]) / (p2.y - p0.y || 1)) * h;\n        const m2 = ((p3[k] - p1[k]) / (p3.y - p1.y || 1)) * h;\n        out[k] = (2 * t3 - 3 * t2 + 1) * p1[k] + (t3 - 2 * t2 + t) * m1 + (-2 * t3 + 3 * t2) * p2[k] + (t3 - t2) * m2;\n    }\n    return out;\n}\n// Closed section outline (x across, z up): keel -> starboard chine -> side -> sheer -> deck crown -> port side -> back.\n// Hard chine; the side bulges outward by `bulge` (tumblehome aft); the deck is a parabolic crown.\nfunction sectionPoints(s, n) {\n    const half = [[0, s.keelZ], [s.chineB, s.chineZ]];\n    const dx = s.sheerB - s.chineB, dz = s.sheerZ - s.chineZ, len = Math.hypot(dx, dz) || 1;\n    const cx = (s.chineB + s.sheerB) / 2 + (s.bulge * dz) / len;\n    const cz = (s.chineZ + s.sheerZ) / 2 - (s.bulge * dx) / len;\n    for (let i = 1; i <= n; i++) {\n        const t = i / n, a = (1 - t) * (1 - t), b = 2 * (1 - t) * t, c = t * t;\n        half.push([a * s.chineB + b * cx + c * s.sheerB, a * s.chineZ + b * cz + c * s.sheerZ]);\n    }\n    for (let i = 1; i <= n; i++) {\n        const x = s.sheerB * (1 - i / n);\n        half.push([x, s.sheerZ + s.crown * (1 - (x / s.sheerB) ** 2)]);\n    }\n    const port = half.slice(1, half.length - 1).reverse().map((p) => [-p[0], p[1]]);\n    return [...half, ...port];\n}\nfunction run(lines = \"\", stationY = 1070) {\n    const L = JSON.parse(linesOrDefault(lines));\n    const pts = sectionPoints(stationAt(L, stationY), 12);\n    let pen = replicad.draw(pts[0]);\n    for (let i = 1; i < pts.length; i++)\n        pen = pen.lineTo(pts[i]);\n    return new Assembly({ geometry: pen.close() });\n}\n"
+            },
+            {
+              "atomType": "Molecule",
+              "x": 0.35,
+              "y": 0.6,
+              "uniqueID": "id-1549037",
+              "name": "Lightening Cutout",
+              "ioValues": [
+                {
+                  "name": "Outline",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Bottom Z",
+                  "ioValue": 152
+                }
+              ],
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 0.98,
+                  "y": 0.5,
+                  "uniqueID": "id-1549039",
+                  "ioValues": [
+                    {
+                      "name": "number or geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.0254,
+                  "y": 0.1538,
+                  "uniqueID": "id-1549041",
+                  "name": "Outline",
+                  "type": "geometry",
+                  "options": []
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.0254,
+                  "y": 0.2462,
+                  "uniqueID": "id-1549044",
+                  "name": "Bottom Z",
+                  "type": "number",
+                  "options": []
+                },
+                {
+                  "atomType": "GitHubMolecule",
+                  "x": 0.3,
+                  "y": 0.3,
+                  "uniqueID": "id-1549052",
+                  "name": "Offset_2D",
+                  "ioValues": [
+                    {
+                      "name": "2D_Shape",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "Offset",
+                      "ioValue": -138
+                    }
+                  ],
+                  "topLevel": false,
+                  "allAtoms": [
+                    {
+                      "atomType": "Output",
+                      "x": 1,
+                      "y": 0.5,
+                      "uniqueID": "id-1549048",
+                      "ioValues": [
+                        {
+                          "name": "number or geometry",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.0254,
+                      "y": 0.1538,
+                      "uniqueID": "id-1549049",
+                      "name": "2D_Shape",
+                      "type": "geometry",
+                      "options": []
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.0254,
+                      "y": 0.2462,
+                      "uniqueID": "id-1549050",
+                      "name": "Offset",
+                      "options": []
+                    },
+                    {
+                      "atomType": "Code",
+                      "x": 0.5,
+                      "y": 0.4,
+                      "uniqueID": "id-1549051",
+                      "ioValues": [
+                        {
+                          "name": "shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "distance",
+                          "ioValue": -138
+                        }
+                      ],
+                      "interpreterVersion": 1,
+                      "code": "function run(shape: Assembly, distance: number = 1): Assembly {\n  const total = shape.leafCount();\n  let done = 0;\n  progress(`offsetting ${total} parts`);\n  return shape.onLeafs((leaf) => {\n    progress(`offsetting part ${done + 1}/${total}`);\n    leaf.geometry = leaf.geometry.offset(distance);\n    done++;\n    return leaf;\n  }) as Assembly;\n}",
+                      "compiledCode": "\"use strict\";\nfunction run(shape, distance = 1) {\n    const total = shape.leafCount();\n    let done = 0;\n    progress(`offsetting ${total} parts`);\n    return shape.onLeafs((leaf) => {\n        progress(`offsetting part ${done + 1}/${total}`);\n        leaf.geometry = leaf.geometry.offset(distance);\n        done++;\n        return leaf;\n    });\n}\n"
+                    }
+                  ],
+                  "allConnectors": [
+                    {
+                      "ap2Name": "shape",
+                      "ap1ID": "id-1549049",
+                      "ap2ID": "id-1549051"
+                    },
+                    {
+                      "ap2Name": "distance",
+                      "ap1ID": "id-1549050",
+                      "ap2ID": "id-1549051"
+                    },
+                    {
+                      "ap2Name": "number or geometry",
+                      "ap1ID": "id-1549051",
+                      "ap2ID": "id-1549048"
+                    }
+                  ],
+                  "parentRepo": {
+                    "owner": "BarbourSmith",
+                    "repoName": "Offset_2D",
+                    "privateRepo": false,
+                    "dateModified": "739888"
+                  },
+                  "unitsKey": "MM",
+                  "fileTypeVersion": 1,
+                  "scaleToProjectUnits": true,
+                  "lastReloadedFromGithubAt": 1795133521916
+                },
+                {
+                  "atomType": "Rectangle",
+                  "x": 0.3,
+                  "y": 0.75,
+                  "uniqueID": "id-1549064",
+                  "ioValues": [
+                    {
+                      "name": "x length",
+                      "ioValue": 4000
+                    },
+                    {
+                      "name": "y length",
+                      "ioValue": 4000
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Move",
+                  "x": 0.5,
+                  "y": 0.75,
+                  "uniqueID": "id-1549068",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "xDist",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "yDist",
+                      "ioValue": 2222
+                    },
+                    {
+                      "name": "zDist",
+                      "ioValue": 0
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Intersection",
+                  "x": 0.65,
+                  "y": 0.45,
+                  "uniqueID": "id-1549074",
+                  "ioValues": [
+                    {
+                      "name": "geometry1",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "geometry2",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "GitHubMolecule",
+                  "x": 0.82,
+                  "y": 0.45,
+                  "uniqueID": "id-1549083",
+                  "name": "Offset_2D",
+                  "ioValues": [
+                    {
+                      "name": "2D_Shape",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "Offset",
+                      "ioValue": 70
+                    }
+                  ],
+                  "topLevel": false,
+                  "allAtoms": [
+                    {
+                      "atomType": "Output",
+                      "x": 1,
+                      "y": 0.5,
+                      "uniqueID": "id-1549079",
+                      "ioValues": [
+                        {
+                          "name": "number or geometry",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.0254,
+                      "y": 0.1538,
+                      "uniqueID": "id-1549080",
+                      "name": "2D_Shape",
+                      "type": "geometry",
+                      "options": []
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.0254,
+                      "y": 0.2462,
+                      "uniqueID": "id-1549081",
+                      "name": "Offset",
+                      "options": []
+                    },
+                    {
+                      "atomType": "Code",
+                      "x": 0.5,
+                      "y": 0.4,
+                      "uniqueID": "id-1549082",
+                      "ioValues": [
+                        {
+                          "name": "shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "distance",
+                          "ioValue": 70
+                        }
+                      ],
+                      "interpreterVersion": 1,
+                      "code": "function run(shape: Assembly, distance: number = 1): Assembly {\n  const total = shape.leafCount();\n  let done = 0;\n  progress(`offsetting ${total} parts`);\n  return shape.onLeafs((leaf) => {\n    progress(`offsetting part ${done + 1}/${total}`);\n    leaf.geometry = leaf.geometry.offset(distance);\n    done++;\n    return leaf;\n  }) as Assembly;\n}",
+                      "compiledCode": "\"use strict\";\nfunction run(shape, distance = 1) {\n    const total = shape.leafCount();\n    let done = 0;\n    progress(`offsetting ${total} parts`);\n    return shape.onLeafs((leaf) => {\n        progress(`offsetting part ${done + 1}/${total}`);\n        leaf.geometry = leaf.geometry.offset(distance);\n        done++;\n        return leaf;\n    });\n}\n"
+                    }
+                  ],
+                  "allConnectors": [
+                    {
+                      "ap2Name": "shape",
+                      "ap1ID": "id-1549080",
+                      "ap2ID": "id-1549082"
+                    },
+                    {
+                      "ap2Name": "distance",
+                      "ap1ID": "id-1549081",
+                      "ap2ID": "id-1549082"
+                    },
+                    {
+                      "ap2Name": "number or geometry",
+                      "ap1ID": "id-1549082",
+                      "ap2ID": "id-1549079"
+                    }
+                  ],
+                  "parentRepo": {
+                    "owner": "BarbourSmith",
+                    "repoName": "Offset_2D",
+                    "privateRepo": false,
+                    "dateModified": "739888"
+                  },
+                  "unitsKey": "MM",
+                  "fileTypeVersion": 1,
+                  "scaleToProjectUnits": true,
+                  "lastReloadedFromGithubAt": 1795133522003
+                },
+                {
+                  "atomType": "Equation",
+                  "x": 0.3,
+                  "y": 0.92,
+                  "uniqueID": "id-1549097",
+                  "name": "bottomZ + 2070",
+                  "ioValues": [
+                    {
+                      "name": "bottomZ",
+                      "ioValue": 152
+                    }
+                  ],
+                  "currentEquation": "bottomZ + 2070"
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "2D_Shape",
+                  "ap1ID": "id-1549041",
+                  "ap2ID": "id-1549052"
+                },
+                {
+                  "ap2Name": "bottomZ",
+                  "ap1ID": "id-1549044",
+                  "ap2ID": "id-1549097"
+                },
+                {
+                  "ap2Name": "geometry1",
+                  "ap1ID": "id-1549052",
+                  "ap2ID": "id-1549074"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-1549064",
+                  "ap2ID": "id-1549068"
+                },
+                {
+                  "ap2Name": "geometry2",
+                  "ap1ID": "id-1549068",
+                  "ap2ID": "id-1549074"
+                },
+                {
+                  "ap2Name": "2D_Shape",
+                  "ap1ID": "id-1549074",
+                  "ap2ID": "id-1549083"
+                },
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-1549083",
+                  "ap2ID": "id-1549039"
+                },
+                {
+                  "ap2Name": "yDist",
+                  "ap1ID": "id-1549097",
+                  "ap2ID": "id-1549068"
+                }
+              ],
+              "fileTypeVersion": 1
+            },
+            {
+              "atomType": "Difference",
+              "x": 0.5,
+              "y": 0.35,
+              "uniqueID": "id-1549102",
+              "ioValues": [
+                {
+                  "name": "retain",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "remove",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Extrude",
+              "x": 0.62,
+              "y": 0.35,
+              "uniqueID": "id-1549106",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "height",
+                  "ioValue": 18
+                }
+              ]
+            },
+            {
+              "atomType": "Rotate",
+              "x": 0.72,
+              "y": 0.35,
+              "uniqueID": "id-1549110",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "x-axis degrees",
+                  "ioValue": 90
+                },
+                {
+                  "name": "y-axis degrees",
+                  "ioValue": 0
+                },
+                {
+                  "name": "z-axis degrees",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.82,
+              "y": 0.35,
+              "uniqueID": "id-1549116",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 1079
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Tag",
+              "x": 0.9,
+              "y": 0.5,
+              "uniqueID": "id-1549122",
+              "name": "wood",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ],
+              "tags": [
+                "wood"
+              ]
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "lines",
+              "ap1ID": "id-1549025",
+              "ap2ID": "id-1549028"
+            },
+            {
+              "ap2Name": "Outline",
+              "ap1ID": "id-1549028",
+              "ap2ID": "id-1549037"
+            },
+            {
+              "ap2Name": "retain",
+              "ap1ID": "id-1549028",
+              "ap2ID": "id-1549102"
+            },
+            {
+              "ap2Name": "remove",
+              "ap1ID": "id-1549037",
+              "ap2ID": "id-1549102"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-1549102",
+              "ap2ID": "id-1549106"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-1549106",
+              "ap2ID": "id-1549110"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-1549110",
+              "ap2ID": "id-1549116"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-1549116",
+              "ap2ID": "id-1549122"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-1549122",
+              "ap2ID": "id-1549023"
+            }
+          ],
+          "fileTypeVersion": 1
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0254,
+          "y": 0.1538,
+          "uniqueID": "id-1549125",
+          "name": "Hull Lines",
+          "type": "string",
+          "options": []
+        },
+        {
+          "atomType": "Molecule",
+          "x": 0.3,
+          "y": 0.2,
+          "uniqueID": "id-1549128",
+          "name": "Frame 8",
+          "ioValues": [
+            {
+              "name": "Hull Lines",
+              "ioValue": "{\"note\":\"Hull lines in mm, to the inside of the planking (the frame outlines). Measured from the reference photos.\",\"transom\":{\"keelY\":-96,\"keelZ\":184,\"rakeDeg\":14,\"chineB\":530,\"chineV\":110,\"sheerB\":645,\"sheerV\":400,\"crown\":32,\"bulge\":60},\"stations\":[{\"name\":\"Frame 8\",\"y\":535,\"keelZ\":60,\"chineB\":600,\"chineZ\":185,\"sheerB\":760,\"sheerZ\":590,\"crown\":45,\"bulge\":20},{\"name\":\"Frame 7\",\"y\":1070,\"keelZ\":0,\"chineB\":591,\"chineZ\":96,\"sheerB\":822,\"sheerZ\":608,\"crown\":55.5,\"bulge\":0},{\"name\":\"Frame 6\",\"y\":1605,\"keelZ\":0,\"chineB\":555,\"chineZ\":118,\"sheerB\":810,\"sheerZ\":630,\"crown\":54,\"bulge\":0},{\"name\":\"Frame 5\",\"y\":2140,\"keelZ\":0,\"chineB\":495,\"chineZ\":145,\"sheerB\":778,\"sheerZ\":655,\"crown\":52,\"bulge\":0},{\"name\":\"Frame 4\",\"y\":2675,\"keelZ\":0,\"chineB\":425,\"chineZ\":176,\"sheerB\":731,\"sheerZ\":680,\"crown\":50,\"bulge\":0},{\"name\":\"Frame 3\",\"y\":3210,\"keelZ\":15,\"chineB\":335,\"chineZ\":228,\"sheerB\":652,\"sheerZ\":712,\"crown\":45,\"bulge\":0},{\"name\":\"Frame 2\",\"y\":3745,\"keelZ\":95,\"chineB\":215,\"chineZ\":318,\"sheerB\":520,\"sheerZ\":758,\"crown\":35,\"bulge\":0},{\"name\":\"Frame 1\",\"y\":4280,\"keelZ\":310,\"chineB\":90,\"chineZ\":480,\"sheerB\":305,\"sheerZ\":822,\"crown\":20,\"bulge\":0},{\"name\":\"Bow\",\"y\":4540,\"keelZ\":600,\"chineB\":6,\"chineZ\":670,\"sheerB\":14,\"sheerZ\":870,\"crown\":1,\"bulge\":0}],\"keel\":[[-96,184],[535,60],[1070,0],[3000,0],[3210,15],[3500,45],[3745,95],[4000,175],[4280,310],[4450,450],[4540,600],[4590,740],[4610,880]],\"stem\":{\"aftEndY\":3300,\"moulding\":110,\"siding\":40},\"keelBatten\":{\"width\":136,\"depth\":20},\"frameBand\":68,\"frameBottomBand\":56,\"frameCornerRadius\":70}"
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "id-1549130",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0.0254,
+              "y": 0.1538,
+              "uniqueID": "id-1549132",
+              "name": "Hull Lines",
+              "type": "string",
+              "options": []
+            },
+            {
+              "atomType": "Code",
+              "x": 0.2,
+              "y": 0.3,
+              "uniqueID": "id-1549135",
+              "ioValues": [
+                {
+                  "name": "lines",
+                  "ioValue": "{\"note\":\"Hull lines in mm, to the inside of the planking (the frame outlines). Measured from the reference photos.\",\"transom\":{\"keelY\":-96,\"keelZ\":184,\"rakeDeg\":14,\"chineB\":530,\"chineV\":110,\"sheerB\":645,\"sheerV\":400,\"crown\":32,\"bulge\":60},\"stations\":[{\"name\":\"Frame 8\",\"y\":535,\"keelZ\":60,\"chineB\":600,\"chineZ\":185,\"sheerB\":760,\"sheerZ\":590,\"crown\":45,\"bulge\":20},{\"name\":\"Frame 7\",\"y\":1070,\"keelZ\":0,\"chineB\":591,\"chineZ\":96,\"sheerB\":822,\"sheerZ\":608,\"crown\":55.5,\"bulge\":0},{\"name\":\"Frame 6\",\"y\":1605,\"keelZ\":0,\"chineB\":555,\"chineZ\":118,\"sheerB\":810,\"sheerZ\":630,\"crown\":54,\"bulge\":0},{\"name\":\"Frame 5\",\"y\":2140,\"keelZ\":0,\"chineB\":495,\"chineZ\":145,\"sheerB\":778,\"sheerZ\":655,\"crown\":52,\"bulge\":0},{\"name\":\"Frame 4\",\"y\":2675,\"keelZ\":0,\"chineB\":425,\"chineZ\":176,\"sheerB\":731,\"sheerZ\":680,\"crown\":50,\"bulge\":0},{\"name\":\"Frame 3\",\"y\":3210,\"keelZ\":15,\"chineB\":335,\"chineZ\":228,\"sheerB\":652,\"sheerZ\":712,\"crown\":45,\"bulge\":0},{\"name\":\"Frame 2\",\"y\":3745,\"keelZ\":95,\"chineB\":215,\"chineZ\":318,\"sheerB\":520,\"sheerZ\":758,\"crown\":35,\"bulge\":0},{\"name\":\"Frame 1\",\"y\":4280,\"keelZ\":310,\"chineB\":90,\"chineZ\":480,\"sheerB\":305,\"sheerZ\":822,\"crown\":20,\"bulge\":0},{\"name\":\"Bow\",\"y\":4540,\"keelZ\":600,\"chineB\":6,\"chineZ\":670,\"sheerB\":14,\"sheerZ\":870,\"crown\":1,\"bulge\":0}],\"keel\":[[-96,184],[535,60],[1070,0],[3000,0],[3210,15],[3500,45],[3745,95],[4000,175],[4280,310],[4450,450],[4540,600],[4590,740],[4610,880]],\"stem\":{\"aftEndY\":3300,\"moulding\":110,\"siding\":40},\"keelBatten\":{\"width\":136,\"depth\":20},\"frameBand\":68,\"frameBottomBand\":56,\"frameCornerRadius\":70}"
+                },
+                {
+                  "name": "stationY",
+                  "ioValue": 535
+                }
+              ],
+              "interpreterVersion": 1,
+              "code": "/**\n * Outer outline of one hull frame at this frame's station, drawn from the shared Hull Lines table (wired in).\n * Returns the 2D outline in the frame's own plane: X across the boat, Y = height above the baseline (mm).\n * The lightening cutout, thickness, placement and tag are built-in atoms beside this one.\n */\nfunction stationAt(L: any, y: number): any {\n  // the raked transom joins the table as a vertical pseudo-station at its mid-height, so the run aft stays fair\n  const T = L.transom, r = (T.rakeDeg * Math.PI) / 180;\n  const tr = { y: T.keelY + (T.sheerV / 2) * Math.sin(r), keelZ: T.keelZ, chineB: T.chineB, chineZ: T.keelZ + T.chineV * Math.cos(r),\n    sheerB: T.sheerB, sheerZ: T.keelZ + T.sheerV * Math.cos(r), crown: T.crown * Math.cos(r), bulge: T.bulge };\n  const st = [tr, ...L.stations];\n  const keys = [\"keelZ\", \"chineB\", \"chineZ\", \"sheerB\", \"sheerZ\", \"crown\", \"bulge\"];\n  const n = st.length;\n  if (y <= st[0].y) return st[0];\n  if (y >= st[n - 1].y) return st[n - 1];\n  let i = 0;\n  while (i < n - 2 && y > st[i + 1].y) i++;\n  const p0 = st[Math.max(i - 1, 0)], p1 = st[i], p2 = st[i + 1], p3 = st[Math.min(i + 2, n - 1)];\n  const h = p2.y - p1.y, t = (y - p1.y) / h, t2 = t * t, t3 = t2 * t;\n  const out: any = { y };\n  for (const k of keys) {\n    const m1 = ((p2[k] - p0[k]) / (p2.y - p0.y || 1)) * h;\n    const m2 = ((p3[k] - p1[k]) / (p3.y - p1.y || 1)) * h;\n    out[k] = (2 * t3 - 3 * t2 + 1) * p1[k] + (t3 - 2 * t2 + t) * m1 + (-2 * t3 + 3 * t2) * p2[k] + (t3 - t2) * m2;\n  }\n  return out;\n}\n// keel -> starboard chine -> side (bulged quadratic) -> sheer -> parabolic deck crown -> mirrored port side\nfunction sectionPoints(s: any, n: number): number[][] {\n  const half: number[][] = [[0, s.keelZ], [s.chineB, s.chineZ]];\n  const dx = s.sheerB - s.chineB, dz = s.sheerZ - s.chineZ, len = Math.hypot(dx, dz) || 1;\n  const cx = (s.chineB + s.sheerB) / 2 + (s.bulge * dz) / len;\n  const cz = (s.chineZ + s.sheerZ) / 2 - (s.bulge * dx) / len;\n  for (let i = 1; i <= n; i++) {\n    const t = i / n, a = (1 - t) * (1 - t), b = 2 * (1 - t) * t, c = t * t;\n    half.push([a * s.chineB + b * cx + c * s.sheerB, a * s.chineZ + b * cz + c * s.sheerZ]);\n  }\n  for (let i = 1; i <= n; i++) {\n    const x = s.sheerB * (1 - i / n);\n    half.push([x, s.sheerZ + s.crown * (1 - (x / s.sheerB) ** 2)]);\n  }\n  const port = half.slice(1, half.length - 1).reverse().map((p) => [-p[0], p[1]]);\n  return [...half, ...port];\n}\nfunction run(lines: string = \"\", stationY: number = 1070): Assembly {\n  if (typeof lines !== \"string\" || !lines.trim().startsWith(\"{\")) throw new Error(\"Connect the Hull Lines table to this frame's Hull Lines input.\");\n  const pts = sectionPoints(stationAt(JSON.parse(lines), stationY), 12);\n  let pen = replicad.draw(pts[0]);\n  for (let i = 1; i < pts.length; i++) pen = pen.lineTo(pts[i]);\n  return new Assembly({ geometry: pen.close() });\n}\n",
+              "compiledCode": "\"use strict\";\n/**\n * Outer outline of one hull frame at this frame's station, drawn from the shared Hull Lines table (wired in).\n * Returns the 2D outline in the frame's own plane: X across the boat, Y = height above the baseline (mm).\n * The lightening cutout, thickness, placement and tag are built-in atoms beside this one.\n */\nfunction stationAt(L, y) {\n    // the raked transom joins the table as a vertical pseudo-station at its mid-height, so the run aft stays fair\n    const T = L.transom, r = (T.rakeDeg * Math.PI) / 180;\n    const tr = { y: T.keelY + (T.sheerV / 2) * Math.sin(r), keelZ: T.keelZ, chineB: T.chineB, chineZ: T.keelZ + T.chineV * Math.cos(r),\n        sheerB: T.sheerB, sheerZ: T.keelZ + T.sheerV * Math.cos(r), crown: T.crown * Math.cos(r), bulge: T.bulge };\n    const st = [tr, ...L.stations];\n    const keys = [\"keelZ\", \"chineB\", \"chineZ\", \"sheerB\", \"sheerZ\", \"crown\", \"bulge\"];\n    const n = st.length;\n    if (y <= st[0].y)\n        return st[0];\n    if (y >= st[n - 1].y)\n        return st[n - 1];\n    let i = 0;\n    while (i < n - 2 && y > st[i + 1].y)\n        i++;\n    const p0 = st[Math.max(i - 1, 0)], p1 = st[i], p2 = st[i + 1], p3 = st[Math.min(i + 2, n - 1)];\n    const h = p2.y - p1.y, t = (y - p1.y) / h, t2 = t * t, t3 = t2 * t;\n    const out = { y };\n    for (const k of keys) {\n        const m1 = ((p2[k] - p0[k]) / (p2.y - p0.y || 1)) * h;\n        const m2 = ((p3[k] - p1[k]) / (p3.y - p1.y || 1)) * h;\n        out[k] = (2 * t3 - 3 * t2 + 1) * p1[k] + (t3 - 2 * t2 + t) * m1 + (-2 * t3 + 3 * t2) * p2[k] + (t3 - t2) * m2;\n    }\n    return out;\n}\n// keel -> starboard chine -> side (bulged quadratic) -> sheer -> parabolic deck crown -> mirrored port side\nfunction sectionPoints(s, n) {\n    const half = [[0, s.keelZ], [s.chineB, s.chineZ]];\n    const dx = s.sheerB - s.chineB, dz = s.sheerZ - s.chineZ, len = Math.hypot(dx, dz) || 1;\n    const cx = (s.chineB + s.sheerB) / 2 + (s.bulge * dz) / len;\n    const cz = (s.chineZ + s.sheerZ) / 2 - (s.bulge * dx) / len;\n    for (let i = 1; i <= n; i++) {\n        const t = i / n, a = (1 - t) * (1 - t), b = 2 * (1 - t) * t, c = t * t;\n        half.push([a * s.chineB + b * cx + c * s.sheerB, a * s.chineZ + b * cz + c * s.sheerZ]);\n    }\n    for (let i = 1; i <= n; i++) {\n        const x = s.sheerB * (1 - i / n);\n        half.push([x, s.sheerZ + s.crown * (1 - (x / s.sheerB) ** 2)]);\n    }\n    const port = half.slice(1, half.length - 1).reverse().map((p) => [-p[0], p[1]]);\n    return [...half, ...port];\n}\nfunction run(lines = \"\", stationY = 1070) {\n    if (typeof lines !== \"string\" || !lines.trim().startsWith(\"{\"))\n        throw new Error(\"Connect the Hull Lines table to this frame's Hull Lines input.\");\n    const pts = sectionPoints(stationAt(JSON.parse(lines), stationY), 12);\n    let pen = replicad.draw(pts[0]);\n    for (let i = 1; i < pts.length; i++)\n        pen = pen.lineTo(pts[i]);\n    return new Assembly({ geometry: pen.close() });\n}\n"
+            },
+            {
+              "atomType": "Molecule",
+              "x": 0.35,
+              "y": 0.6,
+              "uniqueID": "id-1549146",
+              "name": "Lightening Cutout",
+              "ioValues": [
+                {
+                  "name": "Outline",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "Bottom Z",
+                  "ioValue": 241
+                }
+              ],
+              "topLevel": false,
+              "allAtoms": [
+                {
+                  "atomType": "Output",
+                  "x": 0.98,
+                  "y": 0.5,
+                  "uniqueID": "id-1549148",
+                  "ioValues": [
+                    {
+                      "name": "number or geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.0254,
+                  "y": 0.1538,
+                  "uniqueID": "id-1549150",
+                  "name": "Outline",
+                  "type": "geometry",
+                  "options": []
+                },
+                {
+                  "atomType": "Input",
+                  "x": 0.0254,
+                  "y": 0.2462,
+                  "uniqueID": "id-1549153",
+                  "name": "Bottom Z",
+                  "type": "number",
+                  "options": []
+                },
+                {
+                  "atomType": "GitHubMolecule",
+                  "x": 0.3,
+                  "y": 0.3,
+                  "uniqueID": "id-1549161",
+                  "name": "Offset_2D",
+                  "ioValues": [
+                    {
+                      "name": "2D_Shape",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "Offset",
+                      "ioValue": -138
+                    }
+                  ],
+                  "topLevel": false,
+                  "allAtoms": [
+                    {
+                      "atomType": "Output",
+                      "x": 1,
+                      "y": 0.5,
+                      "uniqueID": "id-1549157",
+                      "ioValues": [
+                        {
+                          "name": "number or geometry",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.0254,
+                      "y": 0.1538,
+                      "uniqueID": "id-1549158",
+                      "name": "2D_Shape",
+                      "type": "geometry",
+                      "options": []
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.0254,
+                      "y": 0.2462,
+                      "uniqueID": "id-1549159",
+                      "name": "Offset",
+                      "options": []
+                    },
+                    {
+                      "atomType": "Code",
+                      "x": 0.5,
+                      "y": 0.4,
+                      "uniqueID": "id-1549160",
+                      "ioValues": [
+                        {
+                          "name": "shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "distance",
+                          "ioValue": -138
+                        }
+                      ],
+                      "interpreterVersion": 1,
+                      "code": "function run(shape: Assembly, distance: number = 1): Assembly {\n  const total = shape.leafCount();\n  let done = 0;\n  progress(`offsetting ${total} parts`);\n  return shape.onLeafs((leaf) => {\n    progress(`offsetting part ${done + 1}/${total}`);\n    leaf.geometry = leaf.geometry.offset(distance);\n    done++;\n    return leaf;\n  }) as Assembly;\n}",
+                      "compiledCode": "\"use strict\";\nfunction run(shape, distance = 1) {\n    const total = shape.leafCount();\n    let done = 0;\n    progress(`offsetting ${total} parts`);\n    return shape.onLeafs((leaf) => {\n        progress(`offsetting part ${done + 1}/${total}`);\n        leaf.geometry = leaf.geometry.offset(distance);\n        done++;\n        return leaf;\n    });\n}\n"
+                    }
+                  ],
+                  "allConnectors": [
+                    {
+                      "ap2Name": "shape",
+                      "ap1ID": "id-1549158",
+                      "ap2ID": "id-1549160"
+                    },
+                    {
+                      "ap2Name": "distance",
+                      "ap1ID": "id-1549159",
+                      "ap2ID": "id-1549160"
+                    },
+                    {
+                      "ap2Name": "number or geometry",
+                      "ap1ID": "id-1549160",
+                      "ap2ID": "id-1549157"
+                    }
+                  ],
+                  "parentRepo": {
+                    "owner": "BarbourSmith",
+                    "repoName": "Offset_2D",
+                    "privateRepo": false,
+                    "dateModified": "739888"
+                  },
+                  "unitsKey": "MM",
+                  "fileTypeVersion": 1,
+                  "scaleToProjectUnits": true,
+                  "lastReloadedFromGithubAt": 1795133666546
+                },
+                {
+                  "atomType": "Rectangle",
+                  "x": 0.3,
+                  "y": 0.6,
+                  "uniqueID": "id-1549173",
+                  "ioValues": [
+                    {
+                      "name": "x length",
+                      "ioValue": 4000
+                    },
+                    {
+                      "name": "y length",
+                      "ioValue": 4000
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Equation",
+                  "x": 0.3,
+                  "y": 0.85,
+                  "uniqueID": "id-1549177",
+                  "name": "bottomZ + 2070",
+                  "ioValues": [
+                    {
+                      "name": "bottomZ",
+                      "ioValue": 241
+                    }
+                  ],
+                  "currentEquation": "bottomZ + 2070"
+                },
+                {
+                  "atomType": "Move",
+                  "x": 0.5,
+                  "y": 0.7,
+                  "uniqueID": "id-1549182",
+                  "ioValues": [
+                    {
+                      "name": "geometry",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "xDist",
+                      "ioValue": 0
+                    },
+                    {
+                      "name": "yDist",
+                      "ioValue": 2311
+                    },
+                    {
+                      "name": "zDist",
+                      "ioValue": 0
+                    }
+                  ]
+                },
+                {
+                  "atomType": "Intersection",
+                  "x": 0.65,
+                  "y": 0.45,
+                  "uniqueID": "id-1549188",
+                  "ioValues": [
+                    {
+                      "name": "geometry1",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "geometry2",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    }
+                  ]
+                },
+                {
+                  "atomType": "GitHubMolecule",
+                  "x": 0.82,
+                  "y": 0.45,
+                  "uniqueID": "id-1549197",
+                  "name": "Offset_2D",
+                  "ioValues": [
+                    {
+                      "name": "2D_Shape",
+                      "ioValue": "__GEOMETRY_INPUT__"
+                    },
+                    {
+                      "name": "Offset",
+                      "ioValue": 70
+                    }
+                  ],
+                  "topLevel": false,
+                  "allAtoms": [
+                    {
+                      "atomType": "Output",
+                      "x": 1,
+                      "y": 0.5,
+                      "uniqueID": "id-1549193",
+                      "ioValues": [
+                        {
+                          "name": "number or geometry",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        }
+                      ]
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.0254,
+                      "y": 0.1538,
+                      "uniqueID": "id-1549194",
+                      "name": "2D_Shape",
+                      "type": "geometry",
+                      "options": []
+                    },
+                    {
+                      "atomType": "Input",
+                      "x": 0.0254,
+                      "y": 0.2462,
+                      "uniqueID": "id-1549195",
+                      "name": "Offset",
+                      "options": []
+                    },
+                    {
+                      "atomType": "Code",
+                      "x": 0.5,
+                      "y": 0.4,
+                      "uniqueID": "id-1549196",
+                      "ioValues": [
+                        {
+                          "name": "shape",
+                          "ioValue": "__GEOMETRY_INPUT__"
+                        },
+                        {
+                          "name": "distance",
+                          "ioValue": 70
+                        }
+                      ],
+                      "interpreterVersion": 1,
+                      "code": "function run(shape: Assembly, distance: number = 1): Assembly {\n  const total = shape.leafCount();\n  let done = 0;\n  progress(`offsetting ${total} parts`);\n  return shape.onLeafs((leaf) => {\n    progress(`offsetting part ${done + 1}/${total}`);\n    leaf.geometry = leaf.geometry.offset(distance);\n    done++;\n    return leaf;\n  }) as Assembly;\n}",
+                      "compiledCode": "\"use strict\";\nfunction run(shape, distance = 1) {\n    const total = shape.leafCount();\n    let done = 0;\n    progress(`offsetting ${total} parts`);\n    return shape.onLeafs((leaf) => {\n        progress(`offsetting part ${done + 1}/${total}`);\n        leaf.geometry = leaf.geometry.offset(distance);\n        done++;\n        return leaf;\n    });\n}\n"
+                    }
+                  ],
+                  "allConnectors": [
+                    {
+                      "ap2Name": "shape",
+                      "ap1ID": "id-1549194",
+                      "ap2ID": "id-1549196"
+                    },
+                    {
+                      "ap2Name": "distance",
+                      "ap1ID": "id-1549195",
+                      "ap2ID": "id-1549196"
+                    },
+                    {
+                      "ap2Name": "number or geometry",
+                      "ap1ID": "id-1549196",
+                      "ap2ID": "id-1549193"
+                    }
+                  ],
+                  "parentRepo": {
+                    "owner": "BarbourSmith",
+                    "repoName": "Offset_2D",
+                    "privateRepo": false,
+                    "dateModified": "739888"
+                  },
+                  "unitsKey": "MM",
+                  "fileTypeVersion": 1,
+                  "scaleToProjectUnits": true,
+                  "lastReloadedFromGithubAt": 1795133666644
+                }
+              ],
+              "allConnectors": [
+                {
+                  "ap2Name": "2D_Shape",
+                  "ap1ID": "id-1549150",
+                  "ap2ID": "id-1549161"
+                },
+                {
+                  "ap2Name": "bottomZ",
+                  "ap1ID": "id-1549153",
+                  "ap2ID": "id-1549177"
+                },
+                {
+                  "ap2Name": "geometry1",
+                  "ap1ID": "id-1549161",
+                  "ap2ID": "id-1549188"
+                },
+                {
+                  "ap2Name": "geometry",
+                  "ap1ID": "id-1549173",
+                  "ap2ID": "id-1549182"
+                },
+                {
+                  "ap2Name": "yDist",
+                  "ap1ID": "id-1549177",
+                  "ap2ID": "id-1549182"
+                },
+                {
+                  "ap2Name": "geometry2",
+                  "ap1ID": "id-1549182",
+                  "ap2ID": "id-1549188"
+                },
+                {
+                  "ap2Name": "2D_Shape",
+                  "ap1ID": "id-1549188",
+                  "ap2ID": "id-1549197"
+                },
+                {
+                  "ap2Name": "number or geometry",
+                  "ap1ID": "id-1549197",
+                  "ap2ID": "id-1549148"
+                }
+              ],
+              "fileTypeVersion": 1
+            },
+            {
+              "atomType": "Difference",
+              "x": 0.5,
+              "y": 0.35,
+              "uniqueID": "id-1549209",
+              "ioValues": [
+                {
+                  "name": "retain",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "remove",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Extrude",
+              "x": 0.62,
+              "y": 0.35,
+              "uniqueID": "id-1549213",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "height",
+                  "ioValue": 18
+                }
+              ]
+            },
+            {
+              "atomType": "Rotate",
+              "x": 0.72,
+              "y": 0.35,
+              "uniqueID": "id-1549217",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "x-axis degrees",
+                  "ioValue": 90
+                },
+                {
+                  "name": "y-axis degrees",
+                  "ioValue": 0
+                },
+                {
+                  "name": "z-axis degrees",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.82,
+              "y": 0.35,
+              "uniqueID": "id-1549223",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 0
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 544
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Tag",
+              "x": 0.9,
+              "y": 0.5,
+              "uniqueID": "id-1549229",
+              "name": "wood",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ],
+              "tags": [
+                "wood"
+              ]
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "lines",
+              "ap1ID": "id-1549132",
+              "ap2ID": "id-1549135"
+            },
+            {
+              "ap2Name": "Outline",
+              "ap1ID": "id-1549135",
+              "ap2ID": "id-1549146"
+            },
+            {
+              "ap2Name": "retain",
+              "ap1ID": "id-1549135",
+              "ap2ID": "id-1549209"
+            },
+            {
+              "ap2Name": "remove",
+              "ap1ID": "id-1549146",
+              "ap2ID": "id-1549209"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-1549209",
+              "ap2ID": "id-1549213"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-1549213",
+              "ap2ID": "id-1549217"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-1549217",
+              "ap2ID": "id-1549223"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-1549223",
+              "ap2ID": "id-1549229"
+            },
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-1549229",
+              "ap2ID": "id-1549130"
+            }
+          ],
+          "fileTypeVersion": 1
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "Hull Lines",
+          "ap1ID": "id-1549125",
+          "ap2ID": "id-1549021"
+        },
+        {
+          "ap2Name": "Hull Lines",
+          "ap1ID": "id-1549125",
+          "ap2ID": "id-1549128"
+        }
+      ],
+      "fileTypeVersion": 1
     }
   ],
-  "allConnectors": [],
+  "allConnectors": [
+    {
+      "ap2Name": "Hull Lines",
+      "ap1ID": "id-1549008",
+      "ap2ID": "id-1549017"
+    }
+  ],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
   "filetypeVersion": 1
