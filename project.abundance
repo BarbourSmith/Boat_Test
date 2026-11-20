@@ -20,7 +20,7 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.121,
+      "x": 0.1177,
       "y": 0.7972,
       "uniqueID": "id-1548876",
       "name": "References",
@@ -88,8 +88,8 @@
         },
         {
           "atomType": "Import",
-          "x": 0.1918,
-          "y": 0.8563,
+          "x": 0.2004,
+          "y": 0.8225,
           "uniqueID": "id-1548891",
           "fileName": "IMG_0074.JPG",
           "name": "Import",
@@ -99,7 +99,13 @@
           "SVGwidth": 10
         }
       ],
-      "allConnectors": [],
+      "allConnectors": [
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1548891",
+          "ap2ID": "id-1548878"
+        }
+      ],
       "fileTypeVersion": 1
     },
     {
