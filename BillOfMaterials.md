@@ -2,4 +2,17 @@
 # Bill Of Materials 
  |Part|Number Needed|Price|Source| 
  |----|----------|-----|-----|
-|Total: |0|$0.00| |
+|Boat gauge, 3-3/8 in (tachometer or speedometer)|2|$0.00||
+|Stainless steel boat steering wheel, 13-1/2 in|1|$0.00||
+|Side-mount remote throttle and shift control|1|$0.00||
+|6 gallon portable boat fuel tank|1|$0.00||
+|Group 24 battery box with strap|1|$0.00||
+|Marine fire extinguisher, 5-B:C|1|$0.00||
+|LED bi-color bow navigation light|1|$0.00||
+|All-round white LED stern light with 36 in pole|1|$0.00||
+|6 in stainless steel boat cleat|3|$0.00||
+|Stainless steel bow eye, 3/8 in|1|$0.00||
+|Stainless steel transom tie-down eye|2|$0.00||
+|Brass transom drain plug, 1 in|1|$0.00||
+|9.9 hp short-shaft (15 in) outboard motor|1|$0.00||
+|Total: |17|$0.00| |
