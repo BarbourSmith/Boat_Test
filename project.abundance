@@ -3672,8 +3672,8 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.85,
-      "y": 0.5,
+      "x": 0.789,
+      "y": 0.4225,
       "uniqueID": "id-1550004",
       "ioValues": [
         {
@@ -5737,8 +5737,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.85,
-      "y": 0.68,
+      "x": 0.4372,
+      "y": 0.1408,
       "uniqueID": "id-1550662",
       "name": "Cockpit Outline",
       "ioValues": [
@@ -6040,8 +6040,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.85,
-      "y": 0.8,
+      "x": 0.5344,
+      "y": 0.4197,
       "uniqueID": "id-1550715",
       "name": "Cockpit Opening",
       "ioValues": [
@@ -6153,8 +6153,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.85,
-      "y": 0.2,
+      "x": 0.6243,
+      "y": 0.1211,
       "uniqueID": "id-1550742",
       "name": "Deck and Coaming",
       "ioValues": [
@@ -8294,8 +8294,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.85,
-      "y": 0.32,
+      "x": 0.6217,
+      "y": 0.2845,
       "uniqueID": "id-1550859",
       "name": "Windscreen",
       "ioValues": [
@@ -8781,8 +8781,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.85,
-      "y": 0.44,
+      "x": 0.6091,
+      "y": 0.4479,
       "uniqueID": "id-1550951",
       "name": "Rub Rails",
       "ioValues": [
@@ -8971,8 +8971,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.85,
-      "y": 0.8,
+      "x": 0.6237,
+      "y": 0.8901,
       "uniqueID": "id-1552403",
       "name": "Outboard Motor",
       "topLevel": false,
@@ -11689,8 +11689,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.85,
-      "y": 0.8,
+      "x": 0.5992,
+      "y": 0.8338,
       "uniqueID": "id-1553613",
       "name": "Cockpit",
       "topLevel": false,
@@ -22043,8 +22043,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.85,
-      "y": 0.2,
+      "x": 0.838,
+      "y": 0.169,
       "uniqueID": "id-1555433",
       "name": "Flat Patterns",
       "ioValues": [
@@ -25455,8 +25455,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.85,
-      "y": 0.32,
+      "x": 0.9094,
+      "y": 0.3324,
       "uniqueID": "id-1556181",
       "name": "Cut Layouts",
       "ioValues": [
@@ -25803,8 +25803,8 @@
         },
         {
           "atomType": "Molecule",
-          "x": 0.34,
-          "y": 0.68,
+          "x": 0.338,
+          "y": 0.6563,
           "uniqueID": "id-1556218",
           "name": "Cut Layout 12 mm Plywood",
           "ioValues": [
@@ -26386,8 +26386,8 @@
             },
             {
               "atomType": "CutOrient",
-              "x": 0.26,
-              "y": 0.44,
+              "x": 0.2612,
+              "y": 0.4366,
               "uniqueID": "id-1556249",
               "name": "Cut Orient",
               "ioValues": [
@@ -26627,8 +26627,8 @@
             },
             {
               "atomType": "CutOrient",
-              "x": 0.26,
-              "y": 0.44,
+              "x": 0.2877,
+              "y": 0.4479,
               "uniqueID": "id-1556270",
               "name": "Cut Orient",
               "ioValues": [
@@ -26679,8 +26679,8 @@
             },
             {
               "atomType": "CutLayout",
-              "x": 0.34,
-              "y": 0.56,
+              "x": 0.4087,
+              "y": 0.5239,
               "uniqueID": "id-1556273",
               "name": "Cut Layout",
               "ioValues": [
