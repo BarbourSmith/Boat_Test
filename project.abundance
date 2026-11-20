@@ -418,8 +418,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.4392,
-      "y": 0.3746,
+      "x": 0.381,
+      "y": 0.3606,
       "uniqueID": "id-1549017",
       "name": "Frames",
       "ioValues": [
@@ -2747,8 +2747,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.3512,
-      "y": 0.7775,
+      "x": 0.3142,
+      "y": 0.7915,
       "uniqueID": "id-1549868",
       "name": "Transom",
       "ioValues": [
@@ -3145,8 +3145,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.4134,
-      "y": 0.9211,
+      "x": 0.2798,
+      "y": 0.9296,
       "uniqueID": "id-1549904",
       "name": "Stem",
       "ioValues": [
@@ -3376,8 +3376,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.4312,
-      "y": 0.6704,
+      "x": 0.3452,
+      "y": 0.6254,
       "uniqueID": "id-1549940",
       "name": "Keel",
       "ioValues": [
@@ -3470,8 +3470,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.7,
-      "y": 0.6,
+      "x": 0.6243,
+      "y": 0.631,
       "uniqueID": "id-1549980",
       "name": "Boat Structure",
       "ioValues": [
@@ -3720,8 +3720,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.4782,
-      "y": 0.5324,
+      "x": 0.4246,
+      "y": 0.5042,
       "uniqueID": "id-1550012",
       "name": "Longitudinals",
       "ioValues": [
@@ -18973,8 +18973,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.85,
-      "y": 0.8,
+      "x": 0.7427,
+      "y": 0.8113,
       "uniqueID": "id-1554893",
       "name": "Deck Hardware",
       "topLevel": false,
