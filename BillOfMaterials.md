@@ -2,17 +2,23 @@
 # Bill Of Materials 
  |Part|Number Needed|Price|Source| 
  |----|----------|-----|-----|
-|Boat gauge, 3-3/8 in (tachometer or speedometer)|2|$0.00||
-|Stainless steel boat steering wheel, 13-1/2 in|1|$0.00||
-|Side-mount remote throttle and shift control|1|$0.00||
-|6 gallon portable boat fuel tank|1|$0.00||
-|Group 24 battery box with strap|1|$0.00||
-|Marine fire extinguisher, 5-B:C|1|$0.00||
-|LED bi-color bow navigation light|1|$0.00||
-|All-round white LED stern light with 36 in pole|1|$0.00||
-|6 in stainless steel boat cleat|3|$0.00||
-|Stainless steel bow eye, 3/8 in|1|$0.00||
-|Stainless steel transom tie-down eye|2|$0.00||
-|Brass transom drain plug, 1 in|1|$0.00||
-|9.9 hp short-shaft (15 in) outboard motor|1|$0.00||
-|Total: |17|$0.00| |
+|Attwood LightArmor 910R round base for all-round pole light|1|$0.00||
+|Attwood LightArmor NV2002SS-7 bi-color bow navigation light, stainless|1|$55.99|https://alltackle.com/attwood-lightarmor-bow-mount-navigation-light-stainless-steel-bi-color-2nm|
+|Kidde Mariner 5 marine fire extinguisher, 5-B:C (466635MTL)|1|$31.99|https://defender.com/en_us/kidde-mariner-5-portable-fire-extinguisher-466635mtl|
+|Tohatsu/Nissan OEM fuel line with primer bulb (99998PBA2M)|1|$127.23|https://defender.com/en_us/tohatsu-nissan-oem-replacement-fuel-line-99998pba2m|
+|Tohatsu side-mount remote control box for MFS9.9 remote (dealer part)|1|$0.00|https://tohatsu.com/accessories/ctl_boxes.html|
+|Blain's Farm & Fleet Group 24 marine starting battery, 550 CCA|1|$83.99|https://www.farmandfleet.com/products/423384-blains-farm-and-fleet-marine-starting-battery.html|
+|Faria SE9534B 3-1/4 in Euro speedometer, 65 MPH pitot|1|$35.56|https://www.greatlakesskipper.com/faria-boat-speedometer-gauge-se9534b-euro-black-white-3-1-4-inch|
+|Faria THC635B 3-1/4 in tachometer, 7000 RPM, hour meter|1|$88.96|https://www.greatlakesskipper.com/faria-boat-tachometer-gauge-thc635b-7000-rpm-3-1-4-inch-silver-gray|
+|Uflex C8X10 33C throttle/shift control cable, 10 ft|2|$87.20|https://www.marineengine.com/boat-accessories/steering-controls/C8X10|
+|Attwood 5530-36A7 LED articulating all-round light, 36 in pole|1|$67.99|https://www.overtons.com/attwood-led-articulating-all-round-light-with-36-pole-319729.html|
+|Lewmar Power Grip 13.5 in stainless steel steering wheel (2020211229)|1|$159.99|https://www.overtons.com/lewmar-power-grip-boat-steering-wheel-with-12-welded-nut---13.5-stainless-steel-369541.html|
+|Attwood 9065-1 Group 24 vented battery box with strap|1|$12.99|https://www.sportsmans.com/fishing-gear-supplies/electric-motor-accessories/attwood-battery-box-group-24/p/400034|
+|Tohatsu MFS9.9 EFI 9.9 hp outboard, remote control, electric start, 15 in short shaft (dealer quote)|1|$0.00|https://www.tohatsu.com/outboards/9_9_4st.html|
+|Sea-Dog 044206 6 in chrome zinc open-base stud-mount cleat|3|$72.15|https://www.walmart.com/ip/32737890|
+|Seachoice 33601 stainless steel bow/stern eye, 3/8 x 3-7/16 in|3|$44.46|https://www.walmart.com/ip/32738933|
+|Seachoice 76861 white vinyl cushion, 40 x 17 x 3-1/8 in|2|$216.42|https://www.walmart.com/ip/37320800|
+|Uflex Rotech ROTECH11FC rotary steering system, 11 ft (helm, bezel, cable)|1|$176.86|https://www.walmart.com/ip/Uflex-ROTECH11FC-Rotech-Rotary-Steering-System-11/29793631|
+|Scepter 10511 6 gal under-seat portable fuel tank|1|$72.99|https://www.wholesalemarine.com/scepter-marine-6-gallon-under-seat-portable-fuel-tank|
+|Seachoice 18871 brass drain plug, 1-1/4 in|1|$9.69|https://www.zoro.com/seachoice-seachoice-brass-1-14-in-w-drain-plug-1-pk-18871/i/G4691824|
+|Total: |25|$1344.46| |
