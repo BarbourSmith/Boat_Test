@@ -3824,6 +3824,10 @@
         {
           "name": "Longitudinals",
           "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Cockpit Opening",
+          "ioValue": "__GEOMETRY_INPUT__"
         }
       ],
       "topLevel": false,
@@ -3918,8 +3922,38 @@
             {
               "name": "Shape6",
               "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape7",
+              "ioValue": "__GEOMETRY_INPUT__"
             }
           ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0254,
+          "y": 0.6154,
+          "uniqueID": "id-1550735",
+          "name": "Cockpit Opening",
+          "type": "geometry",
+          "options": []
+        },
+        {
+          "atomType": "ExtractTag",
+          "x": 0.68,
+          "y": 0.32,
+          "uniqueID": "id-1550739",
+          "name": "Extract Not Keep Out",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "tagIndex": 0,
+          "selectedTags": [],
+          "includeUntagged": false,
+          "notKeepOut": true
         }
       ],
       "allConnectors": [
@@ -3949,8 +3983,18 @@
           "ap2ID": "id-1550416"
         },
         {
-          "ap2Name": "number or geometry",
+          "ap2Name": "geometry",
           "ap1ID": "id-1550416",
+          "ap2ID": "id-1550739"
+        },
+        {
+          "ap2Name": "Shape6",
+          "ap1ID": "id-1550735",
+          "ap2ID": "id-1550416"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1550739",
           "ap2ID": "id-1549982"
         }
       ],
@@ -5996,6 +6040,422 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Molecule",
+      "x": 0.85,
+      "y": 0.68,
+      "uniqueID": "id-1550662",
+      "name": "Cockpit Outline",
+      "ioValues": [
+        {
+          "name": "AftEdgeY",
+          "ioValue": 700
+        },
+        {
+          "name": "ForeEdgeY",
+          "ioValue": 2160
+        },
+        {
+          "name": "AftHalfWidth",
+          "ioValue": 455
+        },
+        {
+          "name": "ForeHalfWidth",
+          "ioValue": 586
+        },
+        {
+          "name": "CornerRadius",
+          "ioValue": 100
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-1550664",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0254,
+          "y": 0.1538,
+          "uniqueID": "id-1550666",
+          "name": "AftEdgeY",
+          "type": "number",
+          "options": []
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0254,
+          "y": 0.2462,
+          "uniqueID": "id-1550669",
+          "name": "ForeEdgeY",
+          "type": "number",
+          "options": []
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0254,
+          "y": 0.3385,
+          "uniqueID": "id-1550672",
+          "name": "AftHalfWidth",
+          "type": "number",
+          "options": []
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0254,
+          "y": 0.4308,
+          "uniqueID": "id-1550675",
+          "name": "ForeHalfWidth",
+          "type": "number",
+          "options": []
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0254,
+          "y": 0.5231,
+          "uniqueID": "id-1550678",
+          "name": "CornerRadius",
+          "type": "number",
+          "options": []
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.18,
+          "y": 0.8,
+          "uniqueID": "id-1550681",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 200,
+              "currentEquation": "2*CornerRadius"
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.26,
+          "y": 0.2,
+          "uniqueID": "id-1550684",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": 355,
+              "currentEquation": "AftHalfWidth-CornerRadius"
+            },
+            {
+              "name": "yDist",
+              "ioValue": 800,
+              "currentEquation": "AftEdgeY+CornerRadius"
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.34,
+          "y": 0.32,
+          "uniqueID": "id-1550690",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": -355,
+              "currentEquation": "CornerRadius-AftHalfWidth"
+            },
+            {
+              "name": "yDist",
+              "ioValue": 800,
+              "currentEquation": "AftEdgeY+CornerRadius"
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.42,
+          "y": 0.44,
+          "uniqueID": "id-1550696",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": 486,
+              "currentEquation": "ForeHalfWidth-CornerRadius"
+            },
+            {
+              "name": "yDist",
+              "ioValue": 2060,
+              "currentEquation": "ForeEdgeY-CornerRadius"
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.5,
+          "y": 0.56,
+          "uniqueID": "id-1550702",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": -486,
+              "currentEquation": "CornerRadius-ForeHalfWidth"
+            },
+            {
+              "name": "yDist",
+              "ioValue": 2060,
+              "currentEquation": "ForeEdgeY-CornerRadius"
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "ShrinkWrap",
+          "x": 0.58,
+          "y": 0.68,
+          "uniqueID": "id-1550708",
+          "name": "Shrink Wrap",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape2",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape3",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape4",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape5",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape 1",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape2",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape3",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape4",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Shape5",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1550681",
+          "ap2ID": "id-1550684"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1550681",
+          "ap2ID": "id-1550690"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1550681",
+          "ap2ID": "id-1550696"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1550681",
+          "ap2ID": "id-1550702"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-1550684",
+          "ap2ID": "id-1550708"
+        },
+        {
+          "ap2Name": "Shape2",
+          "ap1ID": "id-1550690",
+          "ap2ID": "id-1550708"
+        },
+        {
+          "ap2Name": "Shape3",
+          "ap1ID": "id-1550696",
+          "ap2ID": "id-1550708"
+        },
+        {
+          "ap2Name": "Shape4",
+          "ap1ID": "id-1550702",
+          "ap2ID": "id-1550708"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1550708",
+          "ap2ID": "id-1550664"
+        }
+      ],
+      "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Molecule",
+      "x": 0.85,
+      "y": 0.8,
+      "uniqueID": "id-1550715",
+      "name": "Cockpit Opening",
+      "ioValues": [
+        {
+          "name": "Outline",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-1550717",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0254,
+          "y": 0.1538,
+          "uniqueID": "id-1550719",
+          "name": "Outline",
+          "type": "geometry",
+          "options": []
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.18,
+          "y": 0.32,
+          "uniqueID": "id-1550722",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "height",
+              "ioValue": 530
+            }
+          ]
+        },
+        {
+          "atomType": "Move",
+          "x": 0.26,
+          "y": 0.44,
+          "uniqueID": "id-1550726",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "xDist",
+              "ioValue": 0
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 470
+            }
+          ]
+        },
+        {
+          "atomType": "Color",
+          "x": 0.34,
+          "y": 0.56,
+          "uniqueID": "id-1550732",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "selectedColor": "Keep Out"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1550719",
+          "ap2ID": "id-1550722"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1550722",
+          "ap2ID": "id-1550726"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1550726",
+          "ap2ID": "id-1550732"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1550732",
+          "ap2ID": "id-1550717"
+        }
+      ],
+      "fileTypeVersion": 1
     }
   ],
   "allConnectors": [
@@ -6067,6 +6527,16 @@
     {
       "ap2Name": "Longitudinals",
       "ap1ID": "id-1550012",
+      "ap2ID": "id-1549980"
+    },
+    {
+      "ap2Name": "Outline",
+      "ap1ID": "id-1550662",
+      "ap2ID": "id-1550715"
+    },
+    {
+      "ap2Name": "Cockpit Opening",
+      "ap1ID": "id-1550715",
       "ap2ID": "id-1549980"
     }
   ],
